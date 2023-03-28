@@ -7,7 +7,7 @@
   </div>
 </template>
 <script>
-import Header from "@/components/TheHeader/MainHeader.vue";
+import Header from "@/components/MainHeader/MainHeader.vue";
 import MainHero from "@/components/MainHero/MainHero.vue";
 import BlockList from "@/components/BlockList/BlockList.vue";
 export default {
