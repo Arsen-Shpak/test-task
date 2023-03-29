@@ -1,14 +1,14 @@
 <template>
-  <div class="navigation">
-    <div class="navigation__wrapper">
-      <div class="navigation__left">
+  <div class='navigation'>
+    <div class='navigation__wrapper'>
+      <div class='navigation__left'>
         <router-link 
-          to="/" 
+          to='/' 
           class='navigation__logo-link'
         >
           <img 
-            :src="Logo" 
-            alt="Logo" 
+            :src='Logo' 
+            alt='Logo' 
             class='navigation__logo-img'
           >
           <p 
@@ -17,23 +17,28 @@
             HandBrake
           </p>
         </router-link>
-        
-
-
       </div>
-      <div class="navigation__rigth">
-        <nav class="navigation__page">
+      <div class='navigation__rigth'>
+        <nav class='navigation__page'>
           <ul class='navigation__list'>
             <li 
-              v-for="route in routes"
-              :key="route"
+              v-for='route in routes'
+              :key='route'
               class='navigation__item'
             >
               <router-link
-                to="/"
-                class="navigation__link"
+                to='/'
+                class='navigation__link'
               >
                 {{ route }}
+              </router-link>
+            </li>
+            <li class='navigation__item-downloads'>
+              <router-link  
+                to='/'
+                class='navigation__link'
+              >
+                Downloads
               </router-link>
             </li>
           </ul>
@@ -46,19 +51,18 @@
 <script>
 import Logo from "@/images/Logo.png";
 export default {
-  data() {
+  data () {
     return {
       Logo: Logo,
-      routes:["Docs","GitHub","News","Community & Support", "Downloads"]
+      routes:['Docs','GitHub','News','Community & Support']
     }
   }
 }
 
 </script>
 
-<style lang="scss" scoped>
+<style lang='scss' scoped>
 .navigation {
-  // background-color: green;
   margin:30px 113px 70px 0;
 
   &__wrapper{
@@ -66,7 +70,6 @@ export default {
 		max-width: 1024px;
 		display: flex;
 		justify-content: space-between;
-		// margin: 0 auto;
   }
 
   &__left {
@@ -116,12 +119,11 @@ export default {
 
   &__item {
     line-height: 13px;
-  }
-
-  &__item:last-child{
-    background: #FFFFFF;
-    border-radius: 17px;
-    padding: 13px 6px;
+    &-downloads {
+      background: #FFFFFF;
+      border-radius: 17px;
+      padding: 13px 6px;
+    }
   }
 
   &__link {
@@ -131,6 +133,5 @@ export default {
     font-size: 12px;
     color: #25468A;
   }
-
 }
 </style>

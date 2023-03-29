@@ -1,28 +1,28 @@
 <template>
-  <div class="testTask" v-touch:swipe="swipeHandler">
-    <div class="testTask__header">
-      <img :src="TestTask" alt="TestTask" class="testTask__img">
+  <div class='testTask' v-touch:swipe="swipeHandler">
+    <div class='testTask__header'>
+      <img :src="TestTask" alt='TestTask' class='testTask__img'>
     </div>
-    <div class="testTask__main">
-      <section class="testTask__main-section column">
+    <div class='testTask__main'>
+      <section class='testTask__main-section column'>
         <PrimaryButton 
-          title="Go to main page" 
-          class="column__button"
+          title='Go to main page' 
+          class='column__button'
           @primaryButton="goToMain"
         />
-        <h2 class="column__title">Open Source Licence</h2>
-        <p class="column__text">
+        <h2 class='column__title'>Open Source Licence</h2>
+        <p class='column__text'>
           Most of HandBrake's source code is covered by the GNU General Public License, version 2. A copy of which is included with every release in the COPYING file. Portions are covered under BSD 3 Clause
         </p>
       </section>
-      <section class="testTask__main-section column">
+      <section class='testTask__main-section column'>
         <PrimaryButton 
-          title="Say thanks!" 
-          class="column__button"
+          title='Say thanks!' 
+          class='column__button'
           @primaryButton="showPopup"
         />
-        <h2 class="column__title">Credits</h2>
-        <p class="column__text">
+        <h2 class='column__title'>Credits</h2>
+        <p class='column__text'>
           HandBrake uses a lot of (L)GPL or BSD licensed libraries:A list of these is available here. 
           <br>
           <br>
@@ -31,13 +31,13 @@
         <!-- <p class="column__text">Thank their authors!</p> -->
       </section>
     </div>
-    <footer class="testTask__footer">
-      <div class="testTask__footer-section">
-        <p class="testTask__footer-text">Copyright 2020 ©
-          <span class="testTask__footer-team">The HandBrake Team</span>
+    <footer class='testTask__footer'>
+      <div class='testTask__footer-section'>
+        <p class='testTask__footer-text'>Copyright 2020 ©
+          <span class='testTask__footer-team'>The HandBrake Team</span>
           | Privacy Policy
         </p>
-        <p class="testTask__footer-text">Found a bug? Talk to us</p>
+        <p class='testTask__footer-text'>Found a bug? Talk to us</p>
       </div>
     </footer>
     <TestTaskPopup v-if="popup" @hidePopup="hidePopup"/>

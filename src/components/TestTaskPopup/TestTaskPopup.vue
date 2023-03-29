@@ -1,18 +1,18 @@
 <template>
-  <div class="wrapper">
-    <div class="popup">
+  <div class='wrapper'>
+    <div class='popup'>
       <img 
         :src="Cross" 
-        alt="Cross"
-        class="popup__cross"
+        alt='Cross'
+        class='popup__cross'
         @click="hidePopup"
       >
-      <h2 class="popup__title">Thank you for this test task!</h2>
-      <h3 class="popup__name">YOU HAVE DONE A GREAT JOB!</h3>
+      <h2 class='popup__title'>Thank you for this test task!</h2>
+      <h3 class='popup__name'>YOU HAVE DONE A GREAT JOB!</h3>
       <img 
         :src="GreatJob" 
-        alt="GreatJob"
-        class="popup__img"
+        alt='GreatJob'
+        class='popup__img'
       >
     </div>
   </div>
@@ -25,13 +25,13 @@ import Cross from "@/images/Cross.png";
 export default {
   data() {
     return {
-      GreatJob: GreatJob,
+      GreatJob:GreatJob,
       Cross:Cross,
     }
   },
   methods: {
-    hidePopup() {
-      this.$emit("hidePopup")
+    hidePopup () {
+      this.$emit ("hidePopup")
     }
   }
 }
@@ -51,8 +51,6 @@ export default {
 .popup{
   position: fixed;
   top:141px;
-  // right: 0;
-  // left:0;
   background:rgba(255, 255, 255, 0.85);
   width: 800px;
   display: flex;

@@ -1,16 +1,16 @@
 <template>
-  <div class="reasons__content-block main">
-      <div class="main__gallery"> 
+  <div class='reasons__content-block main'>
+      <div class='main__gallery'> 
         <img 
           :src="Main1" 
-          alt="Main1" 
-          class="main__gallery-img"
+          alt='Main1' 
+          class='main__gallery-img'
         >
       </div>
-      <div class="main__description">
-        <h4 class="main__description-name">Optimised for easy use</h4>
-        <h2 class="main__description-title">Built-in Device Presets</h2>
-        <p class="main__description-text">
+      <div class='main__description'>
+        <h4 class='main__description-name'>Optimised for easy use</h4>
+        <h2 class='main__description-title'>Built-in Device Presets</h2>
+        <p class='main__description-text'>
           Get started with HandBrake in seconds by choosing a profile optimised for your device, or choose a universal profile for standard or high quality conversions. Simple, easy, fast. For those that want more choice, tweak many basic and advanced options to improve your encodes.
         </p>
       </div>
@@ -22,7 +22,7 @@ import Main1 from "@/images/Main1.svg";
 import Main2 from "@/images/Main2.svg";
 import Correct from "@/images/Correct.svg";
 export default {
-   data() {
+  data() {
     return {
       Main1: Main1,
       Main2: Main2,
@@ -35,7 +35,6 @@ export default {
 .main{
    display: flex;
     justify-content: space-between;
-    // align-items: center;
     padding:0 113px;
   &__description{
     width:319px;
@@ -45,8 +44,6 @@ export default {
       font-weight: 400;
       font-size: 11.3778px;
       line-height: 15px;
-      // display: flex;
-      // align-items: center;
       letter-spacing: 0.01em;
       text-transform: uppercase;
       color: #25468A;
@@ -58,8 +55,6 @@ export default {
       font-weight: 700;
       font-size: 22.7556px;
       line-height: 31px;
-      // display: flex;
-      // align-items: center;
       letter-spacing: 0.01em;
       color: #1391CE;
       margin-bottom: 23px;
@@ -70,8 +65,6 @@ export default {
       font-weight: 400;
       font-size: 12.8px;
       line-height: 17px;
-      // display: flex;
-      // align-items: center;
       letter-spacing: 0.02em;
       color: #4F4F4F;
       margin-bottom: 17px;
@@ -82,15 +75,10 @@ export default {
       font-weight: 600;
       font-size: 15.6444px;
       line-height: 21px;
-      // display: flex;
-      // align-items: center;
       letter-spacing: 0.02em;
       color: #1391CE;
       margin-bottom:11px;
     }
-    // &-list{
-
-    // }
   }
  
   &__gallery-img{

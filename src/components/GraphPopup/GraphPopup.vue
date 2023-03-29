@@ -1,19 +1,13 @@
 <template>
-  <div class="wrapper">
+  <div class='wrapper'>
     <img 
-        :src="Cross" 
-        alt="Cross"
-        class="popup__cross"
-        @click="hidePopup"
+      :src="Cross" 
+      alt="Cross"
+      class='popup__cross'
+      @click="hidePopup"
       >
-    <div class="popup">
-      <!-- <img 
-        :src="Cross" 
-        alt="Cross"
-        class="popup__cross"
-        @click="hidePopup"
-      > -->
-      <p class="popup__text">
+    <div class='popup'>
+      <p class='popup__text'>
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
       </p>
     </div>
@@ -28,8 +22,8 @@ export default {
     }
   },
   methods: {
-    hidePopup() {
-      this.$emit("hidePopup")
+    hidePopup () {
+      this.$emit ("hidePopup")
     }
   }
 }
@@ -42,10 +36,6 @@ export default {
   position: absolute;
   width: 480px;
   height: 330px;
-  // top:0;
-  // bottom:0;
-  // right: 0;
-  // left:0;
   background-color:rgba(255, 255, 255, 0.95);
 }
 .popup{

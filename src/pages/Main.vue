@@ -1,8 +1,7 @@
 <template>
-  <div class="homepage">
+  <div class='homepage'>
     <Header/>
     <MainHero/>
-    <!-- <BlockList :blocks="blockList" v-if="blockList.length"/> -->
     <BlockList :blocks="mainList" v-if="mainList.length"/>
   </div>
 </template>
@@ -14,9 +13,8 @@ export default {
   components: {
     Header,MainHero,BlockList
   },
-  data() {
+  data () {
     return {
-      // blockList: [],
       mainList: [
         {
           text: "Convert video from nearly any format",
@@ -33,23 +31,10 @@ export default {
       ]
     }
   },
-  // methods:{
-  //   addBlocks() {
-  //     this.mainList.forEach((text, index) => {
-  //       setTimeout(() => {
-  //         this.blockList.push(text);
-  //       }, 2000 * (index + 1));
-  //     });
-  //   }
-  // },
-  // mounted() {
-  //   this.addBlocks();
-  // }
 }
 </script>
 <style lang="scss" scoped>
 .homepage{
-  // padding:0 113px;
   padding-left: 113px;
   height: 100vh;
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #E9F5FF 100%), rgba(19, 145, 206, 0.7);

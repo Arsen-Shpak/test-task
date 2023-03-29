@@ -1,17 +1,17 @@
 <template>
-  <div class="hero">
-    <div class="hero__left">
-      <h1 class="hero__name">Handbrake</h1>
-      <h4 class="hero__surname">The open source video transcoder</h4>
-      <p class="hero__description">
+  <div class='hero'>
+    <div class='hero__left'>
+      <h1 class='hero__name'>Handbrake</h1>
+      <h4 class='hero__surname'>The open source video transcoder</h4>
+      <p class='hero__description'>
         HandBrake is a tool for converting video from nearly any format to a selection of modern, widely supported codecs
       </p>
-      <PrimaryButton title="Next" @primaryButton="goToNextPage"/>
+      <PrimaryButton title='Next' @primaryButton='goToNextPage'/>
     </div>
-    <div class="hero__right">
+    <div class='hero__right'>
       <img 
         :src="Notebook" 
-        alt="Notebook" 
+        alt='Notebook' 
         class='hero__img'
       >
     </div>
@@ -23,14 +23,14 @@ import PrimaryButton from "../PrimaryButton/PrimaryButton.vue";
 
 export default {
   components:{PrimaryButton},
-  data(){
+  data (){
     return {
       Notebook:Notebook
     }
   },
   methods: {
-    goToNextPage() {
-      this.$router.push({name:"reasons"})
+    goToNextPage () {
+      this.$router.push ({name:"reasons"})
     }
   }
 }
@@ -76,11 +76,7 @@ export default {
   }
 
   &__img {
-    // position: relative;
-    // right: 0;
-    // top:0;
     width:547px;
-    // width: 100%;
     height: 100%;
     object-fit: contain;
     object-position: center;

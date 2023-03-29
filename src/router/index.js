@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from "vue"
 import Router from "vue-router";
 import NotFound from "@/pages/NotFound.vue";
 import Main from "@/pages/Main.vue";

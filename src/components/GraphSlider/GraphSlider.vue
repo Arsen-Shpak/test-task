@@ -1,12 +1,12 @@
 <template>
-   <div class="graph__animation">
+   <div class='graph__animation'>
       <div @click="showSlide">
-        <img :src="Background" alt="Background" class="graph__arrow-background" >
-        <img :src="Arrow" alt="Arrow" class="graph__arrow-arrow">
+        <img :src="Background" alt='Background' class='graph__arrow-background' >
+        <img :src="Arrow" alt='Arrow' class='graph__arrow-arrow'>
       </div>
       
       <div class='graph__slide' v-if="isSlideOpen">
-        <p class="graph__slide-text">
+        <p class='graph__slide-text'>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
         </p>
       </div>
@@ -29,9 +29,10 @@ export default {
       Background:Background,
     }
   },
+
   methods: {
-    showSlide() {
-      this.$emit("showSlide")
+    showSlide () {
+      this.$emit ("showSlide")
     }
   }
 }
@@ -39,17 +40,12 @@ export default {
 <style lang="scss" scoped>
 .graph{
   &__slide{
-    // padding:44px 14px 44px 30px; 
     width: 400px;
     background: #FFFFFF;
     position:fixed;
     top:42px;
     right:0;
     transform: translateX(400px);
-
-    // &-true{
-    //   transform: translateX(0%);
-    // }
     &-text{
       padding:44px 14px 44px 30px; 
       font-family: 'Roboto';

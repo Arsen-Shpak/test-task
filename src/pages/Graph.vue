@@ -1,55 +1,43 @@
 <template>
-  <div class="graph">
-    <!-- <div class="graph__animation">
-      <div @click="showSlide">
-        <img :src="Background" alt="Background" class="graph__arrow-background" >
-        <img :src="Arrow" alt="Arrow" class="graph__arrow-arrow">
-      </div>
-      
-      <div class='graph__slide' v-if="isSlideOpen">
-        <p class="graph__slide-text">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-        </p>
-      </div>
-    </div> -->
+  <div class='graph'>
     <GraphSlider :isSlideOpen="isSlideOpen" @showSlide="showSlide"/>
-    <div class="graph__upperSection">
-      <div class="graph__section">
-        <p class="graph__section-text">
+    <div class='graph__upperSection'>
+      <div class='graph__section'>
+        <p class='graph__section-text'>
           Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
         </p>
-        <div class="graph__section-question">
+        <div class='graph__section-question'>
           <img 
             :src="Question" 
-            alt="Question" 
-            class="graph__section-img"
+            alt='Question' 
+            class='graph__section-img'
             @click="showPopup1"
           >
         </div>
       </div>
     </div>
-    <div class="graph__mainSection">
-      <img :src="Graph" alt="Graph" class="graph__mainSection-img">
-      <div class="graph__section">
-        <div class="graph__section-question">
+    <div class='graph__mainSection'>
+      <img :src="Graph" alt='Graph' class='graph__mainSection-img'>
+      <div class='graph__section'>
+        <div class='graph__section-question'>
           <img 
             :src="Question" 
-            alt="Question" 
-            class="graph__section-img"
+            alt='Question' 
+            class='graph__section-img'
             @click="showPopup2"
           >
         </div>
-        <p class="graph__section-text" style="text-align: left;">
+        <p class='graph__section-text' style='text-align: left;'>
           But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful.
         </p>
       </div>
     </div>
-    <div class="graph__images">
-      <img :src="GraphFooter" alt="GraphFooter" class="graph__images-img">
-      <img :src="GraphFooter" alt="GraphFooter" class="graph__images-img">
+    <div class='graph__images'>
+      <img :src="GraphFooter" alt='GraphFooter' class='graph__images-img'>
+      <img :src="GraphFooter" alt='GraphFooter' class='graph__images-img'>
     </div>
-    <GraphPopup style="top: 42px;" @hidePopup="hidePopup1" v-if="popup1"/>
-    <GraphPopup style="top: 334px; right:22px;" @hidePopup="hidePopup2" v-if="popup2"/>
+    <GraphPopup style='top: 42px;' @hidePopup="hidePopup1" v-if="popup1"/>
+    <GraphPopup style='top: 334px; right:22px;' @hidePopup="hidePopup2" v-if="popup2"/>
   </div>
 </template>
 <script>
@@ -67,7 +55,7 @@ export default {
     GraphPopup,GraphSlider
   },
 
-  data() {
+  data () {
     return {
       Question: Question,
       Graph: Graph,
@@ -81,44 +69,40 @@ export default {
     }
   },
   methods: {
-    hidePopup1() {
+    hidePopup1 () {
       this.popup1 = false;
     },
-    hidePopup2() {
+    hidePopup2 () {
       this.popup2 = false;
     },
-    showPopup1() {
+    showPopup1 () {
       this.popup1 = true;
     },
-    showPopup2() {
+    showPopup2 () {
       this.popup2 = true;
     },
-    showSlide() {
-      
-      console.log(this.isSlideOpen);
+    showSlide () {
       if (this.isSlideOpen) {
-        gsap.to(".graph__animation", {
+        gsap.to (".graph__animation", {
           x:24,
           duration: 1,
         });
-        gsap.to(".graph__arrow-arrow", {
+        gsap.to (".graph__arrow-arrow", {
           rotation:0,
           duration: 1,
         });
       }
       else {
-        gsap.to(".graph__animation", {
+        gsap.to (".graph__animation", {
           x:-376,
           duration: 1,
         });
-        gsap.to(".graph__arrow-arrow", {
+        gsap.to (".graph__arrow-arrow", {
           rotation:180,
           duration: 1,
         });
       }
       this.isSlideOpen = !this.isSlideOpen
-      
-      
     }
   }
 }
@@ -128,17 +112,12 @@ export default {
   padding: 0 24px;
   background: #E9F5FF;
   &__slide{
-    // padding:44px 14px 44px 30px; 
     width: 400px;
     background: #FFFFFF;
     position:fixed;
     top:42px;
     right:0;
     transform: translateX(400px);
-
-    // &-true{
-    //   transform: translateX(0%);
-    // }
     &-text{
       padding:44px 14px 44px 30px; 
       font-family: 'Roboto';
@@ -197,10 +176,6 @@ export default {
     }
   }
   &__upperSection{
-    // display: flex;
-    // justify-content: space-between;
-    // align-items: center;
-    // width:475px;
     margin-top:42px;
     margin-bottom:62px;
     
