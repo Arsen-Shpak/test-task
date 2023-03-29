@@ -1,5 +1,5 @@
 <template>
-  <div class='graph'>
+  <div class='graph' v-touch:swipe="swipeHandler">
     <GraphSlider :isSlideOpen="isSlideOpen" @showSlide="showSlide"/>
     <div class='graph__upperSection'>
       <div class='graph__section'>
@@ -103,6 +103,11 @@ export default {
         });
       }
       this.isSlideOpen = !this.isSlideOpen
+    },
+    swipeHandler(direction) { 
+      if (direction === "right") {
+        this.$router.go (-1)
+      }
     }
   }
 }

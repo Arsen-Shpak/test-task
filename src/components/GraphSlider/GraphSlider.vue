@@ -4,7 +4,6 @@
         <img :src="Background" alt='Background' class='graph__arrow-background' >
         <img :src="Arrow" alt='Arrow' class='graph__arrow-arrow'>
       </div>
-      
       <div class='graph__slide' v-if="isSlideOpen">
         <p class='graph__slide-text'>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.

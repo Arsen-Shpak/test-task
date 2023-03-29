@@ -69,7 +69,8 @@ export default {
     },
     swipeHandler(direction) { 
       if (direction === "left") {
-        this.$router.push({name:"main"})
+        this.$router.push({name:"graph"})
+        // this.$router.go (-1)
       }
     }
   }

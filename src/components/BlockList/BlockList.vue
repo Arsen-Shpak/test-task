@@ -1,7 +1,6 @@
 <template>
 <div class='blockList'>
   <div class='blockList__item' v-for="item in blocks" :key="item.id">
-    <!-- <span class='blockList__text'>{{ item.text }}</span> -->
     {{ item.text }}
   </div>
 </div>
