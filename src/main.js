@@ -8,7 +8,7 @@ new Vue({
   render: (h) => h(App),
   router,
   store,
-  Vue2TouchEvents,
 }).$mount("#app");
-//свайп 
+
+Vue.use(Vue2TouchEvents);
 // колесико
