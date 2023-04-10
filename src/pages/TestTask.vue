@@ -80,6 +80,7 @@ export default {
 .testTask{
   background: #E9F5FF;
   height: 100vh;
+  overflow: hidden;
   &__header {
     margin-bottom: 31px;
     border-bottom: 5px solid #1391CE;;

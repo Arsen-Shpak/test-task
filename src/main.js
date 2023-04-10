@@ -11,4 +11,3 @@ new Vue({
 }).$mount("#app");
 
 Vue.use(Vue2TouchEvents);
-// колесико
