@@ -28,9 +28,9 @@
       <div class='reasons__content-block main'>
         <div class='main__description' >
           <h4 class='main__description-name'>Modern video formats</h4>
-          <h2 class='main__description-title'>Built-in Device Presets</h2>
+          <h2 class='main__description-title'>Supported Input Sources</h2>
           <p class='main__description-text'>
-            Get started with HandBrake in seconds by choosing a profile optimised for your device, or choose a universal profile for standard or high quality conversions. Simple, easy, fast. For those that want more choice, tweak many basic and advanced options to improve your encodes.
+            Handbrake can process most common multimedia files and any DVD or BluRay sources that do not contain any kind of copy protection..
           </p>
           <h2 class='main__description-listTitle'>Outputs</h2>
           <ul class='main__description-list list'>
@@ -95,16 +95,17 @@ export default {
 
   methods: {
     async addBlocks () {
-      await gsap.to (".main__gallery", {
+      gsap.to (".main__gallery", {
         opacity: 1,
         duration: 1,
         delay:2,
-        stagger: 2,
+        stagger: 4,
       });
       await gsap.to (".main__description", {
         opacity: 1,
         duration: 1,
-        stagger: 2,
+        delay:4,
+        stagger: 4,
       });
       gsap.to (".reasons__button", {
         opacity: 1,
@@ -219,6 +220,8 @@ export default {
   &__gallery {
     opacity: 0;
     &-img{
+      // opacity: 0;
+
       width: 387px;
       height: 290px;
       object-fit: contain;

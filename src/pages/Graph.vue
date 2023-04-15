@@ -81,13 +81,13 @@ export default {
     showPopup2 () {
       this.popup2 = true;
     },
-    showSlide () {
+    async showSlide () {
       if (this.isSlideOpen) {
         gsap.to (".graph__animation", {
           x:24,
           duration: 1,
         });
-        gsap.to (".graph__arrow-arrow", {
+        await gsap.to (".graph__arrow-arrow", {
           rotation:0,
           duration: 1,
         });
@@ -189,7 +189,7 @@ export default {
     display: flex;
     justify-content: space-between;
     align-items: end;
-    margin-bottom:30px;
+    margin-bottom:23px;
     &-img{
       object-fit: contain;
       object-position: center;

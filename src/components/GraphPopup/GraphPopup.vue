@@ -48,6 +48,14 @@ export default {
   flex-direction: column;
   &__text {
     padding: 58px 17px 58px 36px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+    width: 426px;
+    color: #1391CE;
   }
   &__cross{
     object-fit: contain;
@@ -58,6 +66,7 @@ export default {
     top:15px;
     right:15px;
     cursor: pointer;
+    z-index:1;
   }
 }
 </style>

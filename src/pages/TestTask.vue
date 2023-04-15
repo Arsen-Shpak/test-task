@@ -88,7 +88,7 @@ export default {
   &__img{
     max-width: 1024px;
     width: 100%;
-    height: 443px;
+    height: 439px;
     object-fit: contain;
     object-position: center;
   }

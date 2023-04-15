@@ -122,7 +122,7 @@ export default {
     &-downloads {
       background: #FFFFFF;
       border-radius: 17px;
-      padding: 13px 6px;
+      padding: 6px 13px;
     }
   }
 
