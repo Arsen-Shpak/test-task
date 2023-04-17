@@ -1,43 +1,22 @@
 <template>
-  <div class='navigation'>
-    <div class='navigation__wrapper'>
-      <div class='navigation__left'>
-        <router-link 
-          to='/' 
-          class='navigation__logo-link'
-        >
-          <img 
-            :src='Logo' 
-            alt='Logo' 
-            class='navigation__logo-img'
-          >
-          <p 
-            class='navigation__name-link'
-          >
-            HandBrake
-          </p>
+  <div class="navigation">
+    <div class="navigation__wrapper">
+      <div class="navigation__left">
+        <router-link to="/" class="navigation__logo-link">
+          <img :src="Logo" alt="Logo" class="navigation__logo-img" />
+          <p class="navigation__name-link">HandBrake</p>
         </router-link>
       </div>
-      <div class='navigation__rigth'>
-        <nav class='navigation__page'>
-          <ul class='navigation__list'>
-            <li 
-              v-for='route in routes'
-              :key='route'
-              class='navigation__item'
-            >
-              <router-link
-                to='/'
-                class='navigation__link'
-              >
+      <div class="navigation__rigth">
+        <nav class="navigation__page">
+          <ul class="navigation__list">
+            <li v-for="route in routes" :key="route" class="navigation__item">
+              <router-link to="/" class="navigation__link">
                 {{ route }}
               </router-link>
             </li>
-            <li class='navigation__item-downloads'>
-              <router-link  
-                to='/'
-                class='navigation__link'
-              >
+            <li class="navigation__item-downloads">
+              <router-link to="/" class="navigation__link">
                 Downloads
               </router-link>
             </li>
@@ -51,25 +30,24 @@
 <script>
 import Logo from "@/images/Logo.png";
 export default {
-  data () {
+  data() {
     return {
       Logo: Logo,
-      routes:['Docs','GitHub','News','Community & Support']
-    }
-  }
-}
-
+      routes: ["Docs", "GitHub", "News", "Community & Support"],
+    };
+  },
+};
 </script>
 
-<style lang='scss' scoped>
+<style lang="scss" scoped>
 .navigation {
-  margin:30px 113px 70px 0;
+  margin: 30px 113px 70px 0;
 
-  &__wrapper{
+  &__wrapper {
     height: 38px;
-		max-width: 1024px;
-		display: flex;
-		justify-content: space-between;
+    max-width: 1024px;
+    display: flex;
+    justify-content: space-between;
   }
 
   &__left {
@@ -77,32 +55,32 @@ export default {
     align-items: center;
   }
 
-  &__logo-link{
+  &__logo-link {
     display: flex;
     align-items: center;
     width: 38px;
     height: 38px;
   }
-  &__name-link{
-    font-family: 'Roboto';
+  &__name-link {
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-    color: #25468A;
+    color: #25468a;
     text-decoration: none;
     cursor: pointer;
   }
-  
+
   &__logo-img {
     object-fit: contain;
-		object-position: center;
-		height: 100%;
-		width: 100%;
+    object-position: center;
+    height: 100%;
+    width: 100%;
   }
 
   &__rigth {
-    display:flex;
+    display: flex;
   }
 
   &__page {
@@ -110,28 +88,28 @@ export default {
     align-items: center;
   }
 
-  &__list{
-    display:flex;
+  &__list {
+    display: flex;
     align-items: center;
     flex-direction: row;
-    gap:23px;
+    gap: 23px;
   }
 
   &__item {
     line-height: 13px;
     &-downloads {
-      background: #FFFFFF;
+      background: #ffffff;
       border-radius: 17px;
       padding: 6px 13px;
     }
   }
 
   &__link {
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 500;
     font-size: 12px;
-    color: #25468A;
+    color: #25468a;
   }
 }
 </style>
