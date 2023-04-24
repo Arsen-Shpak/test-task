@@ -99,19 +99,20 @@ export default {
 
   methods: {
     async addBlocks() {
+      const name = gsap.timeline();
       gsap.to(".main__gallery", {
         opacity: 1,
         duration: 1,
         delay: 2,
         stagger: 4,
       });
-      await gsap.to(".main__description", {
+      name.to(".main__description", {
         opacity: 1,
         duration: 1,
         delay: 4,
         stagger: 4,
       });
-      gsap.to(".reasons__button", {
+      name.to(".reasons__button", {
         opacity: 1,
         duration: 1,
       });

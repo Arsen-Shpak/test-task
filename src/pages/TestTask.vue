@@ -112,10 +112,7 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: end;
-      // padding:23px 80px 44px;
       padding-top: 23px;
-      // margin:23px 80px 44px;
-
       border-top: 1px solid #e3e3e3;
     }
     &-text {

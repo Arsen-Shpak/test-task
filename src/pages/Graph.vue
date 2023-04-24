@@ -94,17 +94,31 @@ export default {
     showPopup2() {
       this.popup2 = true;
     },
-    async showSlide() {
+     showSlide() {
+      // let name = gsap.timeline();
       if (this.isSlideOpen) {
+      //   name.to(".graph__animation", {
+      //     x: 24,
+      //     duration: 1,
+      //   });
+      //   name.to(".graph__arrow-arrow", {
+      //     rotation: 0,
+      //     duration: 1,
+      //   });
         gsap.to(".graph__animation", {
           x: 24,
           duration: 1,
         });
-        await gsap.to(".graph__arrow-arrow", {
+        gsap.to(".graph__arrow-arrow", {
           rotation: 0,
           duration: 1,
+          onComplete: () => {
+            this.isSlideOpen = !this.isSlideOpen;
+          }
         });
       } else {
+        this.isSlideOpen = !this.isSlideOpen;
+
         gsap.to(".graph__animation", {
           x: -376,
           duration: 1,
@@ -114,7 +128,7 @@ export default {
           duration: 1,
         });
       }
-      this.isSlideOpen = !this.isSlideOpen;
+      // this.isSlideOpen = !this.isSlideOpen;
     },
     swipeHandler(direction) {
       if (direction === "right") {
