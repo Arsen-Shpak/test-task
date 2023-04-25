@@ -31,7 +31,6 @@
           <br />
           Thank their authors!
         </p>
-        <!-- <p class="column__text">Thank their authors!</p> -->
       </section>
     </div>
     <footer class="testTask__footer">
@@ -75,7 +74,6 @@ export default {
     swipeHandler(direction) {
       if (direction === "left") {
         this.$router.push({ name: "graph" });
-        // this.$router.go (-1)
       }
     },
   },
